@@ -7,12 +7,11 @@ import (
 
 func main() {
 	emailnotidy := notify.NewEailNotidy()
-	for {
-		err := emailnotidy.Send("dalong@qq.com", "demoapp", map[string]interface{}{
-			"content": "dalongdemoapp",
-		})
-		if err != nil {
-			log.Println("err:", err.Error())
-		}
+	err := emailnotidy.Send("dalong@qq.com", "demoapp", map[string]interface{}{
+		"content": "dalongdemoapp",
+	})
+	if err != nil {
+		log.Println("err:", err.Error())
 	}
+
 }

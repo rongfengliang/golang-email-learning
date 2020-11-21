@@ -12,8 +12,9 @@ import (
 
 // EmailNotidy is a email notify
 type EmailNotidy struct {
-	config     config.Config
-	smtpClient *mail.SMTPClient
+	config        config.Config
+	smtpClient    *mail.SMTPClient
+	templateCache map[string]string
 }
 
 // NewEailNotidy NewEailNotidy instance
@@ -39,28 +40,32 @@ func NewEailNotidy() *EmailNotidy {
 	if err != nil {
 		log.Fatalf("init mail instance error:%s", err.Error())
 	}
+	bytes, err := ioutil.ReadFile(config.Template.EmailTemplate)
+	if err != nil {
+		log.Fatalf("init mail instance error:%s", err.Error())
+	}
 	return &EmailNotidy{
 		config:     config,
 		smtpClient: smtpClient,
+		templateCache: map[string]string{
+			config.Template.EmailTemplate: string(bytes),
+		},
 	}
 }
 
 // Send Send
 func (e *EmailNotidy) Send(to string, subject string, datafiles map[string]interface{}) error {
-	bytes, err := ioutil.ReadFile(e.config.Template.EmailTemplate)
-	if err != nil {
-		log.Fatalf("read file error:%s", err.Error())
-	}
-	t := fasttemplate.New(string(bytes), "{{", "}}")
+	t := fasttemplate.New(e.templateCache[e.config.Template.EmailTemplate], "{{", "}}")
 	htmlBody := t.ExecuteString(datafiles)
 	email := mail.NewMSG()
-	email.SetFrom(e.config.Email.FromEmail).
+	from := e.config.Email.FromEmail
+	email.SetFrom(from).
 		AddTo(to).
 		AddCc([]string{"dalongdemo@qq.com"}...).
 		SetSubject(subject)
 
 	email.SetBody(mail.TextHTML, htmlBody)
-	err = email.Send(e.smtpClient)
+	err := email.Send(e.smtpClient)
 	if err != nil {
 		return err
 	}
