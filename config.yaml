@@ -1,0 +1,6 @@
+email:
+   serverhost: 127.0.0.1
+   serverport: 1025
+   fromemail: dalong@qq.com
+template: 
+   email: templates/email.html
