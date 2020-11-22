@@ -1,0 +1,186 @@
+2020/11/22 01:41:02 [SMTP 172.21.0.1:40294] [PROTO: INVALID] Started session, switching to ESTABLISH state
+2020/11/22 01:41:02 [SMTP 172.21.0.1:40294] Sent 35 bytes: '220 mailhog.example ESMTP MailHog\r\n'
+2020/11/22 01:41:02 [SMTP 172.21.0.1:40294] Received 16 bytes: 'EHLO localhost\r\n'
+2020/11/22 01:41:02 [SMTP 172.21.0.1:40294] [PROTO: ESTABLISH] Processing line: EHLO localhost
+2020/11/22 01:41:02 [SMTP 172.21.0.1:40294] [PROTO: ESTABLISH] In state 1, got command 'EHLO', args 'localhost'
+2020/11/22 01:41:02 [SMTP 172.21.0.1:40294] [PROTO: ESTABLISH] In ESTABLISH state
+2020/11/22 01:41:02 [SMTP 172.21.0.1:40294] [PROTO: ESTABLISH] Got EHLO command, switching to MAIL state
+2020/11/22 01:41:02 [SMTP 172.21.0.1:40294] Sent 21 bytes: '250-Hello localhost\r\n'
+2020/11/22 01:41:02 [SMTP 172.21.0.1:40294] Sent 16 bytes: '250-PIPELINING\r\n'
+2020/11/22 01:41:02 [SMTP 172.21.0.1:40294] Sent 16 bytes: '250 AUTH PLAIN\r\n'
+2020/11/22 01:41:02 [SMTP 172.21.0.1:40294] Received 33 bytes: 'AUTH PLAIN AGRhbG9uZ0BxcS5jb20A\r\n'
+2020/11/22 01:41:02 [SMTP 172.21.0.1:40294] [PROTO: MAIL] Processing line: AUTH PLAIN AGRhbG9uZ0BxcS5jb20A
+2020/11/22 01:41:02 [SMTP 172.21.0.1:40294] [PROTO: MAIL] In state 6, got command 'AUTH', args 'PLAIN AGRhbG9uZ0BxcS5jb20A'
+2020/11/22 01:41:02 [SMTP 172.21.0.1:40294] [PROTO: MAIL] In MAIL state
+2020/11/22 01:41:02 [SMTP 172.21.0.1:40294] [PROTO: MAIL] Got AUTH command, staying in MAIL state
+2020/11/22 01:41:02 [SMTP 172.21.0.1:40294] [PROTO: MAIL] Got PLAIN authentication: AGRhbG9uZ0BxcS5jb20A
+2020/11/22 01:41:02 [SMTP 172.21.0.1:40294] Sent 31 bytes: '235 Authentication successful\r\n'
+[APIv1] KEEPALIVE /api/v1/events
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] Received 27 bytes: 'MAIL FROM:<dalong@qq.com>\r\n'
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] [PROTO: MAIL] Processing line: MAIL FROM:<dalong@qq.com>
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] [PROTO: MAIL] In state 6, got command 'MAIL', args 'FROM:<dalong@qq.com>'
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] [PROTO: MAIL] In MAIL state
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] [PROTO: MAIL] Got MAIL command, switching to RCPT state
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] Sent 29 bytes: '250 Sender dalong@qq.com ok\r\n'
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] Received 25 bytes: 'RCPT TO:<dalong@qq.com>\r\n'
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] [PROTO: RCPT] Processing line: RCPT TO:<dalong@qq.com>
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] [PROTO: RCPT] In state 7, got command 'RCPT', args 'TO:<dalong@qq.com>'
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] [PROTO: RCPT] In RCPT state
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] [PROTO: RCPT] Got RCPT command
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] Sent 32 bytes: '250 Recipient dalong@qq.com ok\r\n'
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] Received 29 bytes: 'RCPT TO:<dalongdemo@qq.com>\r\n'
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] [PROTO: RCPT] Processing line: RCPT TO:<dalongdemo@qq.com>
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] [PROTO: RCPT] In state 7, got command 'RCPT', args 'TO:<dalongdemo@qq.com>'
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] [PROTO: RCPT] In RCPT state
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] [PROTO: RCPT] Got RCPT command
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] Sent 36 bytes: '250 Recipient dalongdemo@qq.com ok\r\n'
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] Received 6 bytes: 'DATA\r\n'
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] [PROTO: RCPT] Processing line: DATA
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] [PROTO: RCPT] In state 7, got command 'DATA', args ''
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] [PROTO: RCPT] In RCPT state
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] [PROTO: RCPT] Got DATA command, switching to DATA state
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] Sent 37 bytes: '354 End data with <CR><LF>.<CR><LF>\r\n'
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] Received 562 bytes: 'Subject: demoapp\r\nContent-Transfer-Encoding: quoted-printable\r\nContent-Type: text/html; charset=UTF-8\r\nDate: Sun, 22 Nov 2020 09:41:24 +0800\r\nMIME-Version: 1.0\r\nFrom: <dalong@qq.com>\r\nTo: <dalong@qq.com>\r\nCc: <dalongdemo@qq.com>\r\n\r\n<!DOCTYPE html>\r\n<html lang=3D"en">\r\n<head>\r\n    <meta charset=3D"UTF-8">\r\n    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=\r\n=3D1.0">\r\n    <title>Document</title>\r\n</head>\r\n<body>\r\n    <div id=3D"demoapp" style=3D"background-color:antiquewhite">\r\n        dalongdemoapp\r\n    </div>\r\n</body>\r\n</html>\r\n.\r\n'
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] [PROTO: DATA] Got EOF, storing message and switching to MAIL state
+2020/11/22 01:41:24 Parsing Content from string: 'Subject: demoapp
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+Date: Sun, 22 Nov 2020 09:41:24 +0800
+MIME-Version: 1.0
+From: <dalong@qq.com>
+To: <dalong@qq.com>
+Cc: <dalongdemo@qq.com>
+
+<!DOCTYPE html>
+<html lang=3D"en">
+<head>
+    <meta charset=3D"UTF-8">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id=3D"demoapp" style=3D"background-color:antiquewhite">
+        dalongdemoapp
+    </div>
+</body>
+</html>'
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] Storing message axL6t1gUz9pzs5ctdK9zAOUPo8XVb1XkSCaqKTg8Qhw=@mailhog.example
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] Sent 80 bytes: '250 Ok: queued as axL6t1gUz9pzs5ctdK9zAOUPo8XVb1XkSCaqKTg8Qhw=@mailhog.example\r\n'
+Got message in APIv2 websocket channel
+[APIv2] BROADCAST /api/v2/websocket
+Got message in APIv1 event stream
+Sending content: {
+  "ID": "axL6t1gUz9pzs5ctdK9zAOUPo8XVb1XkSCaqKTg8Qhw=@mailhog.example",
+  "From": {
+    "Relays": null,
+    "Mailbox": "dalong",
+    "Domain": "qq.com",
+    "Params": ""
+  },
+  "To": [
+    {
+      "Relays": null,
+      "Mailbox": "dalong",
+      "Domain": "qq.com",
+      "Params": ""
+    },
+    {
+      "Relays": null,
+      "Mailbox": "dalongdemo",
+      "Domain": "qq.com",
+      "Params": ""
+    }
+  ],
+  "Content": {
+    "Headers": {
+      "Cc": [
+        "\u003cdalongdemo@qq.com\u003e"
+      ],
+      "Content-Transfer-Encoding": [
+        "quoted-printable"
+      ],
+      "Content-Type": [
+        "text/html; charset=UTF-8"
+      ],
+      "Date": [
+        "Sun, 22 Nov 2020 09:41:24 +0800"
+      ],
+      "From": [
+        "\u003cdalong@qq.com\u003e"
+      ],
+      "MIME-Version": [
+        "1.0"
+      ],
+      "Message-ID": [
+        "axL6t1gUz9pzs5ctdK9zAOUPo8XVb1XkSCaqKTg8Qhw=@mailhog.example"
+      ],
+      "Received": [
+        "from localhost by mailhog.example (MailHog)\r\n          id axL6t1gUz9pzs5ctdK9zAOUPo8XVb1XkSCaqKTg8Qhw=@mailhog.example; Sun, 22 Nov 2020 01:41:24 +0000"
+      ],
+      "Return-Path": [
+        "\u003cdalong@qq.com\u003e"
+      ],
+      "Subject": [
+        "demoapp"
+      ],
+      "To": [
+        "\u003cdalong@qq.com\u003e"
+      ]
+    },
+    "Body": "\u003c!DOCTYPE html\u003e\r\n\u003chtml lang=3D\"en\"\u003e\r\n\u003chead\u003e\r\n    \u003cmeta charset=3D\"UTF-8\"\u003e\r\n    \u003cmeta name=3D\"viewport\" content=3D\"width=3Ddevice-width, initial-scale=\r\n=3D1.0\"\u003e\r\n    \u003ctitle\u003eDocument\u003c/title\u003e\r\n\u003c/head\u003e\r\n\u003cbody\u003e\r\n    \u003cdiv id=3D\"demoapp\" style=3D\"background-color:antiquewhite\"\u003e\r\n        dalongdemoapp\r\n    \u003c/div\u003e\r\n\u003c/body\u003e\r\n\u003c/html\u003e",
+    "Size": 557,
+    "MIME": null
+  },
+  "Created": "2020-11-22T01:41:24.557105759Z",
+  "MIME": null,
+  "Raw": {
+    "From": "dalong@qq.com",
+    "To": [
+      "dalong@qq.com",
+      "dalongdemo@qq.com"
+    ],
+    "Data": "Subject: demoapp\r\nContent-Transfer-Encoding: quoted-printable\r\nContent-Type: text/html; charset=UTF-8\r\nDate: Sun, 22 Nov 2020 09:41:24 +0800\r\nMIME-Version: 1.0\r\nFrom: \u003cdalong@qq.com\u003e\r\nTo: \u003cdalong@qq.com\u003e\r\nCc: \u003cdalongdemo@qq.com\u003e\r\n\r\n\u003c!DOCTYPE html\u003e\r\n\u003chtml lang=3D\"en\"\u003e\r\n\u003chead\u003e\r\n    \u003cmeta charset=3D\"UTF-8\"\u003e\r\n    \u003cmeta name=3D\"viewport\" content=3D\"width=3Ddevice-width, initial-scale=\r\n=3D1.0\"\u003e\r\n    \u003ctitle\u003eDocument\u003c/title\u003e\r\n\u003c/head\u003e\r\n\u003cbody\u003e\r\n    \u003cdiv id=3D\"demoapp\" style=3D\"background-color:antiquewhite\"\u003e\r\n        dalongdemoapp\r\n    \u003c/div\u003e\r\n\u003c/body\u003e\r\n\u003c/html\u003e",
+    "Helo": "localhost"
+  }
+}
+
+[APIv1] BROADCAST /api/v1/events
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] Received 6 bytes: 'RSET\r\n'
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] [PROTO: MAIL] Processing line: RSET
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] [PROTO: MAIL] In state 6, got command 'RSET', args ''
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] [PROTO: MAIL] Got RSET command, switching to MAIL state
+2020/11/22 01:41:24 [SMTP 172.21.0.1:40294] Sent 8 bytes: '250 Ok\r\n'
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] Received 54 bytes: 'MAIL FROM:<dalong@qq.com>\r\nMAIL FROM:<dalong@qq.com>\r\n'
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] [PROTO: MAIL] Processing line: MAIL FROM:<dalong@qq.com>
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] [PROTO: MAIL] In state 6, got command 'MAIL', args 'FROM:<dalong@qq.com>'
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] [PROTO: MAIL] In MAIL state
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] [PROTO: MAIL] Got MAIL command, switching to RCPT state
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] Sent 29 bytes: '250 Sender dalong@qq.com ok\r\n'
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] [PROTO: RCPT] Processing line: MAIL FROM:<dalong@qq.com>
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] [PROTO: RCPT] In state 7, got command 'MAIL', args 'FROM:<dalong@qq.com>'
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] [PROTO: RCPT] In RCPT state
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] [PROTO: RCPT] Got unknown command for RCPT state: '&{MAIL FROM:<dalong@qq.com> MAIL FROM:<dalong@qq.com>}'
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] Sent 26 bytes: '500 Unrecognised command\r\n'
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] Received 31 bytes: 'RCPT TO:<dalong@qq.com>\r\nRSET\r\n'
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] [PROTO: RCPT] Processing line: RCPT TO:<dalong@qq.com>
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] [PROTO: RCPT] In state 7, got command 'RCPT', args 'TO:<dalong@qq.com>'
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] [PROTO: RCPT] In RCPT state
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] [PROTO: RCPT] Got RCPT command
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] Sent 32 bytes: '250 Recipient dalong@qq.com ok\r\n'
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] [PROTO: RCPT] Processing line: RSET
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] [PROTO: RCPT] In state 7, got command 'RSET', args ''
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] [PROTO: RCPT] Got RSET command, switching to MAIL state
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] Sent 8 bytes: '250 Ok\r\n'
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] Received 29 bytes: 'RCPT TO:<dalongdemo@qq.com>\r\n'
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] [PROTO: MAIL] Processing line: RCPT TO:<dalongdemo@qq.com>
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] [PROTO: MAIL] In state 6, got command 'RCPT', args 'TO:<dalongdemo@qq.com>'
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] [PROTO: MAIL] In MAIL state
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] [PROTO: MAIL] Got unknown command for MAIL state: '&{RCPT TO:<dalongdemo@qq.com> RCPT TO:<dalongdemo@qq.com>}'
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] Sent 26 bytes: '500 Unrecognised command\r\n'
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] Received 6 bytes: 'RSET\r\n'
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] [PROTO: MAIL] Processing line: RSET
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] [PROTO: MAIL] In state 6, got command 'RSET', args ''
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] [PROTO: MAIL] Got RSET command, switching to MAIL state
+2020/11/22 01:42:01 [SMTP 172.21.0.1:40294] Sent 8 bytes: '250 Ok\r\n'
+[APIv1] KEEPALIVE /api/v1/events
