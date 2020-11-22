@@ -4,6 +4,7 @@ import (
 	"demoapp/config"
 	"io/ioutil"
 	"log"
+	"sync"
 	"time"
 
 	"github.com/valyala/fasttemplate"
@@ -12,6 +13,7 @@ import (
 
 // EmailNotidy is a email notify
 type EmailNotidy struct {
+	sync.Mutex
 	config        config.Config
 	smtpClient    *mail.SMTPClient
 	templateCache map[string]string
@@ -35,7 +37,7 @@ func NewEailNotidy() *EmailNotidy {
 	// Variable to keep alive connection
 	server.KeepAlive = true
 	server.ConnectTimeout = 10 * time.Second
-	server.SendTimeout = 10 * time.Second
+	server.SendTimeout = 0
 	smtpClient, err := server.Connect()
 	if err != nil {
 		log.Fatalf("init mail instance error:%s", err.Error())
@@ -55,6 +57,9 @@ func NewEailNotidy() *EmailNotidy {
 
 // Send Send
 func (e *EmailNotidy) Send(to string, subject string, datafiles map[string]interface{}) error {
+	// add lock for goroutine
+	e.Lock()
+	defer e.Unlock()
 	t := fasttemplate.New(e.templateCache[e.config.Template.EmailTemplate], "{{", "}}")
 	htmlBody := t.ExecuteString(datafiles)
 	email := mail.NewMSG()
