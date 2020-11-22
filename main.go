@@ -10,7 +10,7 @@ import (
 
 func main() {
 
-	emailnotidy := notify.NewEailNotidy()
+	emailnotidy := notify.NewEailNotidy2()
 	// not working tcp out of order
 	http.HandleFunc("/send", func(res http.ResponseWriter, req *http.Request) {
 		res.Write([]byte("send email"))
